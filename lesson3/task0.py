@@ -4,12 +4,12 @@ class User_list:
         self.tail = self.head
 
     def __str__(self):
-        lst = list()
+        lst = ""
         current = self.head
         while current:
-            lst.append(current.value)
+            lst += str(current.value) + ", "
             current = current.next_node
-        return f"{lst}"
+        return f"{lst[:-2]}"
 
     def find(self, value):
         current_node = self.head
